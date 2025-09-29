@@ -13,6 +13,14 @@
     }
 
 
+    body {
+      background-color: #faf0ca;
+      padding: 0;
+    }
+
+
+
+
     table {
       font-size: 18px;
       width: 700px;
@@ -22,15 +30,21 @@
     }
 
 
+
+
     th {
       font-weight: bold;
       border-bottom: 1px dashed black;
     }
 
 
+
+
     td {
       vertical-align: top;
     }
+
+
 
 
     nav {
@@ -39,34 +53,115 @@
     }
 
 
+
+
     nav a {
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
       color: #333;
     }
-
-
-    .placement-box {
-      text-align: center;
-      margin-top: 50px;
+   
+.flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;  /* space between images on flex components */
+      padding: 20px;
     }
 
 
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 14px;
-      color: #555;
+
+
+
+
+
+
+    .flex-item {
+      flex: 1 1 calc((100% - 20px) / 3);  
+   /* 3 columns is the automatic layout for bigger screens */
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
     }
+
+
+
+
+
+
+
+
+    .flex-item img {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+
+
+
+
+
+
+    /* screens for two columns, it will change it for      screens that are medium sized */
+    @media (max-width: 900px) {
+      .flex-item {
+        flex: 1 1 calc((100% - 10px) / 2);  
+    /* 2 columns with 10px gap */
+      }
+
+
+
+
+
+
+
+
+      .flex-item img {
+        height: 250px;
+      }
+    }
+
+
+
+
+
+
+
+
+    /* screens for smaller sized screens */
+    @media (max-width: 600px) {
+      .flex-item {
+        flex: 1 1 100%;  /* width of screen fixed */
+      }
+
+
+
+
+
+
+
+
+      .flex-item img {
+        height: 220px;
+      }
+    }
+
+
   </style>
 </head>
+
+
 
 
 <body>
 
 
-  <h1 id="HitterzVolleyball">HitterzVolleyball</h1>
 
 
   <nav>
@@ -79,24 +174,55 @@
   </nav>
 
 
-  <p>
-    Hitterz Sports Club Incorporated was established in 2018 by a group of friends driven by a shared passion for sports.
-  </p>
 
 
-  <h1>Looking to play for volleyball team?</h1>
-  <h2>Hitterz volleyball ensures that there's a team suited for your abilities</h2>
-  <h2>OUR TEAMS</h2>
-  <h2>Mens Team</h2>
-  <h2>Women's Team</h2>
-  <h2>Mixed Team</h2>
-  <h2>Development Programme</h2>
-  <h2>We are located in the Heart of Auckland</h2>
+ 
 
 
-  <div style="text-align: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz4dOSIx0GYk6c2j6_y9Yr7yYsej9SlRjjrAuGxgCHUp4RBJXMrVvpH8a62xwDHiXhwLI&usqp=CAU" alt="volleyball">
+  <h1 id="HitterzVolleyball">HitterzVolleyball</h1>
+
+
+
+
+<div class="flex-container">
+    <div class="flex-item">
+      <img src="" alt="">
+    </div>
+    <div class="flex-item">
+      <img src="" alt="Image 2">
+    </div>
+    <div class="flex-item">
+      <img src="" alt="Image 3">
+    </div>
+    <div class="flex-item">
+      <img src="" alt="Image 4">
+    </div>
+    <div class="flex-item">
+      <img src="" alt="Image 5">
+    </div>
+    <div class="flex-item">
+      <img src="" alt="Image 6">
+    </div>
+  </div
+
+
+  <!-- Right box -->
+  <div class="container-2">
+    <img src="your-image.jpg" alt="Volleyball Image">
   </div>
+</div>
+
+
+<!-- Three boxes underneath -->
+<div class="flex-container">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</div>
+
+
+
+
 
 
   <div style="text-align: center;">
@@ -123,14 +249,17 @@
   </div>
 
 
-  <div style="text-align: center;">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5kSdoIHwFdrOVe8_AsS-OI5TzZ68X1WNQpQ&s">
-  </div>
+
+
+
+
 
 
   <h1>UPCOMING GAMES AND TOURNAMENTS TO LOOK OUT FOR</h1>
   <h2>• Pistang Pinay games in Christchurch October 27–31 (Labour Weekend)</h2>
   <h2>• Men's Team @ Northern Zone</h2>
+
+
 
 
   <div class="placement-box">
@@ -139,17 +268,22 @@
   </div>
 
 
+
+
   <h1>Thank you to our sponsors</h1>
   <h2>Right Education</h2>
   <h2>Mon's Charity</h2>
   <h2>And to our patrons, who support our club to the best of their ability every year</h2>
 
 
+
+
   <footer>
-    <p>&copy; 2025 Hitterz Volleyball Club Auckland Incorporated. All rights reserved.</p>
+    <p>& copy; 2025 Hitterz Volleyball Club Auckland Incorporated. All rights reserved.</p>
   </footer>
+
+
 
 
 </body>
 </html>
-
