@@ -7,7 +7,7 @@
   <style>
     #HitterzVolleyball {
       /* Styles with background */
-      background-image: url('images/Header.png');
+      background-image: url('images/Header\ \(1\).png');
       background-size: cover;       /* entire thing gets covered so none of the image gets cut off */
       background-position: center;  /* image becomes more centered */
       background-repeat: no-repeat;
@@ -17,38 +17,31 @@
       align-items: center;
       justify-content: center;
       padding: 0 20px;
-       font-size: 3rem;              /* nice big header */
+       font-size: 80px;              /* nice big header */
   font-weight: 900;             /* very bold */
-  color: #ff4800;                  /* dark gray, easier on eyes than pure black */
-  text-shadow: 2px 2px 300x rgba(235, 116, 61, 0.3); /* soft shadow */
+  color: #ffffff;                  /* dark gray, easier on eyes than pure black */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4),
+               -3px -3px 6px rgba(0,0,0,0.4);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* clean font */
   letter-spacing: 1px;          /* slight spacing for readability */
   text-align: center;           /* centers the header */
     }
-
-
 @font-face {
   font-family: 'Roboto';
   src: url('roboto_regular.woff') format('woff');
   font-weight: normal;
 }
-
-
 @font-face {
   font-family: 'Roboto';
   src: url('roboto_bold.woff') format('woff');
   font-weight: bold;
 }
-
-
   body {
   font-family: 'Roboto', sans-serif;
   background-color: #ff941b;
   padding: 0;
   margin: 0;
 }
-
-
 /* Make table bigger and readable */
 #Table {
   width: 80%;                  /* takes most of the page width */
@@ -56,6 +49,7 @@
   font-size: 1.1rem;           /* slightly larger text */
   border-collapse: collapse;  
   text-align: center;           /* center text in cells */
+  border:1px solid #ffffff;
 }
 
 
@@ -103,6 +97,8 @@ nav {
 }
 
 
+
+
 /* Logo styling */
 .logo {
   height: 60px;   /* small logo */
@@ -112,6 +108,8 @@ nav {
 }
 
 
+
+
 nav a {
   background-color: #ff7300;  
   padding: 10px;  
@@ -119,8 +117,13 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   color: #333;
-} 
+}
+   
      /* Wrapper for left & right top boxes */
+
+
+
+
 .container-wrapper {
   display: flex;
   gap: 20px;
@@ -128,8 +131,6 @@ nav a {
   margin-bottom: 20px;
   padding: 10px;  
 }
-
-
 /* Left box */
 .container {
   flex: 1;
@@ -138,6 +139,8 @@ nav a {
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+
 .container {
   font-family: 'Oswald', sans-serif;
   font-size: 1.05rem;
@@ -145,14 +148,14 @@ nav a {
   color: #333;
   border-radius: 15px;
 }
+
+
 .container h1,
 .container p {
   max-width: 1000px;
   margin: 0 auto 20px;
   text-align: left;  
 }
-
-
 /* Right box */
 .container-2 {
   width: 400px;
@@ -164,6 +167,8 @@ nav a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;            /* allows child image to stretch */
 }
+
+
 .container-2 img {
   width: 100%;
   height: 100%;
@@ -171,8 +176,6 @@ nav a {
   display: block;           /* removes inline gaps */
   max-height: 380px;
 }
-
-
 /* Three boxes underneath */
 .flex-container {
   display: flex;
@@ -180,8 +183,6 @@ nav a {
   padding: 10px;
   object-fit: cover;
 }
-
-
 .box {
   flex: 1;
   height: 300px;               /* a bit taller for balance */
@@ -200,42 +201,33 @@ nav a {
   object-fit: cover;   /* fills box neatly */
   display: block;      /* removes extra spacing */
 }
-
-
 .myButton {
   box-shadow: -50px 0px 50px -50px #ffffff;
-  background:linear-gradient(to bottom, #ff7300 5%, #ff7300 100%);
-  background-color:#ff7300;
-  border-radius:10px;
-  vertical-align: middle;
-  border:0.5px solid #ffffff;
-  display:inline-block;
-  cursor:pointer;
-  color:#ffffff;
-  font-family:Arial;
-  font-size:28px;
-  font-weight:bold;
-  padding:32px 76px;
-  text-decoration:none;
- 
-  text-shadow:0px -1px 50px #ffffff;
+  background: linear-gradient(to bottom, #ff7300 5%, #ff7300 100%);
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 32px 76px;
+  text-decoration: none;
+  text-shadow: 0px -1px 50px #ffffff;
+  display: inline-block; /* keeps button neat */
 }
 .myButton:hover {
-  background:linear-gradient(to bottom, #ff7300 5%, #ff7300 100%);
-  background-color:#ff7300;
+  background-color: #ffb477;
 }
 .myButton:active {
-  position:relative;
-  top:1px;
+  position: relative;
+  top: 1px;
 }
-       
     /* screens for two columns it will change for screens that are medium sized */
     @media (max-width: 900px) {
       .flex-item {
         flex: 1 1 calc((100% - 10px) / 2);  /* 2 columns with 10px gap */
       }
-
-
 
 
       .flex-item img {
@@ -247,6 +239,8 @@ nav a {
       .flex-item {
         flex: 1 1 100%;  /* width of screen fixed */
       }
+
+
       .flex-item img {
         height: 220px;
         object-fit: cover;
@@ -267,11 +261,13 @@ nav a {
   color: #333;
   max-width: 1000px;             /* keeps the box from stretching too wide */
 }
+
+
   </style>
 </head>
+
+
 <body>
-
-
   <nav>
   <img src="images/logo.png" alt="Logo" class="logo">
   <a href="about.html">About Us</a>
@@ -310,8 +306,6 @@ nav a {
 </div>
 
 
-
-
 <div class="container-wrapper">
   <!-- Left box -->
   <div class="container">
@@ -336,7 +330,11 @@ nav a {
 
 
 <a href="#" class="myButton">Club Contacts</a>
+
+
 <a href="#" class="myButton">Women's Team</a>
+
+
 <a href="#" class="myButton">Men's Team</a>
 
 
