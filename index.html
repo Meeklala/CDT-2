@@ -28,15 +28,11 @@
     }
 
 
-
-
 @font-face {
   font-family: 'Roboto';
   src: url('roboto_regular.woff') format('woff');
   font-weight: normal;
 }
-
-
 
 
 @font-face {
@@ -46,26 +42,12 @@
 }
 
 
-
-
-
-
-
-
   body {
   font-family: 'Roboto', sans-serif;
   background-color: #ff941b;
   padding: 0;
   margin: 0;
 }
-
-
-
-
-
-
-
-
 
 
 /* Make table bigger and readable */
@@ -145,9 +127,7 @@ nav a {
   color: #333;
 }
    
-     /* Wrapper for left & right top boxes */
-
-
+ /* Wrapper for left & right top boxes */
 
 
 .container-wrapper {
@@ -192,10 +172,6 @@ nav a {
 }
 
 
-
-
-
-
 /* Right box */
 .container-2 {
   width: 400px;
@@ -216,8 +192,6 @@ nav a {
   display: block;           /* removes inline gaps */
   max-height: 380px;
 }
-
-
 
 
 .myButton {
@@ -270,6 +244,8 @@ nav a {
         height: 250px;
       }
     }
+
+
     /* screens for smaller sized screens */
     @media (max-width: 100px) {
       .flex-item {
@@ -281,6 +257,31 @@ nav a {
         height: 220px;
         object-fit: cover;
       }
+
+
+  table {
+  margin: 30px auto;
+  border-collapse: collapse;
+  width: 90%; /* table adjusts to screen width */
+  max-width: 1000px; /* max width of table */
+}
+
+
+td {
+  padding: 10px;
+}
+
+
+td img {
+  width: 100%;        /* image takes full width of td */
+  max-width: 200px;   /* caps size for large screens */
+  height: auto;       /* maintain aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(189, 45, 45, 0.3);
+  display: block;
+}
+
+
     }
 
 
@@ -297,11 +298,13 @@ nav a {
   color: #333;
   max-width: 1000px;             /* keeps the box from stretching too wide */
 }
+
+
   </style>
 </head>
-
-
 <body>
+
+
   <nav>
   <img src="images/logo.png" alt="Logo" class="logo">
   <a href="about.html">About Us</a>
@@ -314,8 +317,6 @@ nav a {
 
 
   <h1 id="HitterzVolleyball">HITTERZ VOLLEYBALL</h1>
-
-
   <div class="schedule-box">
   <table id="Table">
     <tr>
@@ -351,9 +352,9 @@ nav a {
     At a representative level, IPC teams (Youth U19 and adult) are selected annually to compete at the <strong>Inter-Provincial Championships</strong>, held at a North Island venue in June.  
     During the summer, <strong>Beach Volleyball</strong> is offered at both social and competitive (AA) levels across Auckland beaches. One of the highlights on the calendar is the <strong>Hitterz Slam</strong>, which takes place in late January at Auckland’s North Shore beaches and is part of the <strong>National Beach Volleyball Tour</strong>.
   </p>
-
-
   </div>
+
+
   <!-- Right box -->
   <div class="container-2">
     <img src="images/logo3.png" alt="">
@@ -366,6 +367,16 @@ nav a {
   <a href="#" class="myButton">Women's Team</a>
   <a href="#" class="myButton">Men's Team</a>
 </div>
+
+
+ <table>
+    <tr>
+      <td><img src="images/news digit tech image .png" alt="Image 1"></td>
+      <td><img src="images/news digit tech image  (1).png" alt="Image 2"></td>
+      <td><img src="images/news digit tech image  (2).png" alt="Image 3"></td>
+      <td><img src="images/news digit tech image  (3).png" alt="Image 4"></td>
+    </tr>
+  </table>
 
 
   <h1>UPCOMING GAMES AND TOURNAMENTS TO LOOK OUT FOR</h1>
