@@ -26,22 +26,30 @@
   letter-spacing: 1px;          /* slight spacing for readability */
   text-align: center;           /* centers the header */
     }
+
+
 @font-face {
   font-family: 'Roboto';
   src: url('roboto_regular.woff') format('woff');
   font-weight: normal;
 }
+
+
 @font-face {
   font-family: 'Roboto';
   src: url('roboto_bold.woff') format('woff');
   font-weight: bold;
 }
+
+
   body {
   font-family: 'Roboto', sans-serif;
   background-color: #ff941b;
   padding: 0;
   margin: 0;
 }
+
+
 /* Make table bigger and readable */
 #Table {
   width: 80%;                  /* takes most of the page width */
@@ -97,8 +105,6 @@ nav {
 }
 
 
-
-
 /* Logo styling */
 .logo {
   height: 60px;   /* small logo */
@@ -106,8 +112,6 @@ nav {
   vertical-align: middle; /* aligns logo with links */
   margin-right: 15px;      /* spacing after logo */
 }
-
-
 
 
 nav a {
@@ -120,10 +124,6 @@ nav a {
 }
    
      /* Wrapper for left & right top boxes */
-
-
-
-
 .container-wrapper {
   display: flex;
   gap: 20px;
@@ -131,6 +131,8 @@ nav a {
   margin-bottom: 20px;
   padding: 10px;  
 }
+
+
 /* Left box */
 .container {
   flex: 1;
@@ -156,6 +158,8 @@ nav a {
   margin: 0 auto 20px;
   text-align: left;  
 }
+
+
 /* Right box */
 .container-2 {
   width: 400px;
@@ -176,6 +180,8 @@ nav a {
   display: block;           /* removes inline gaps */
   max-height: 380px;
 }
+
+
 /* Three boxes underneath */
 .flex-container {
   display: flex;
@@ -183,6 +189,8 @@ nav a {
   padding: 10px;
   object-fit: cover;
 }
+
+
 .box {
   flex: 1;
   height: 300px;               /* a bit taller for balance */
@@ -201,6 +209,8 @@ nav a {
   object-fit: cover;   /* fills box neatly */
   display: block;      /* removes extra spacing */
 }
+
+
 .myButton {
   box-shadow: -50px 0px 50px -50px #ffffff;
   background: linear-gradient(to bottom, #ff7300 5%, #ff7300 100%);
@@ -216,20 +226,33 @@ nav a {
   text-shadow: 0px -1px 50px #ffffff;
   display: inline-block; /* keeps button neat */
 }
+
+
 .myButton:hover {
   background-color: #ffb477;
 }
+
+
 .myButton:active {
   position: relative;
   top: 1px;
 }
+
+
+.button-container {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  gap: 20px;               /* space between buttons */
+  margin: 30px 0;          /* spacing above/below */
+  flex-wrap: wrap;         /* keeps them tidy on small screens */
+}
+
+
     /* screens for two columns it will change for screens that are medium sized */
     @media (max-width: 900px) {
       .flex-item {
         flex: 1 1 calc((100% - 10px) / 2);  /* 2 columns with 10px gap */
       }
-
-
       .flex-item img {
         height: 250px;
       }
@@ -239,8 +262,6 @@ nav a {
       .flex-item {
         flex: 1 1 100%;  /* width of screen fixed */
       }
-
-
       .flex-item img {
         height: 220px;
         object-fit: cover;
@@ -261,8 +282,6 @@ nav a {
   color: #333;
   max-width: 1000px;             /* keeps the box from stretching too wide */
 }
-
-
   </style>
 </head>
 
@@ -329,13 +348,13 @@ nav a {
 </div>
 
 
-<a href="#" class="myButton">Club Contacts</a>
+<div class="button-container">
+  <a href="#" class="myButton">Club Contacts</a>
+  <a href="#" class="myButton">Women's Team</a>
+  <a href="#" class="myButton">Men's Team</a>
+</div>
 
 
-<a href="#" class="myButton">Women's Team</a>
-
-
-<a href="#" class="myButton">Men's Team</a>
 
 
 <!-- Three boxes underneath -->
@@ -350,6 +369,8 @@ nav a {
     <img src="images/icons for website (2).png" alt="Box 3 image">
   </div>
 </div>
+
+
 
 
   <h1>UPCOMING GAMES AND TOURNAMENTS TO LOOK OUT FOR</h1>
