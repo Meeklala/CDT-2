@@ -75,8 +75,6 @@ nav {
 }
 
 
-
-
 /* Logo styling */
 .logo {
   height: 60px;   /* small logo */
@@ -84,8 +82,6 @@ nav {
   vertical-align: middle; /* aligns logo with links */
   margin-right: 15px;      /* spacing after logo */
 }
-
-
 
 
 nav a {
@@ -96,8 +92,6 @@ nav a {
   font-weight: bold;
   color: #333;
 }
-   
-     /* Wrapper for left & right top boxes */
 
 
 .container-wrapper {
@@ -105,41 +99,47 @@ nav a {
   gap: 20px;
   align-items: stretch; /* Makes heights match */
   margin-bottom: 20px;
-  padding: 20px;  
+  padding: 10px;  
 }
-
-
-
-
-
-
 
 
 /* Left box */
 .container {
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   background-color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.container {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+  border-radius: 15px;
 }
 
 
 /* Right box */
 .container-2 {
   width: 400px;
-  padding: 20px;
+  height: 100%;             /* ensure it stretches with the flex wrapper */
+  padding: 0;               /* remove padding so image can touch edges */
   box-sizing: border-box;
   background-color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;            /* allows child image to stretch */
 }
 
 
 .container-2 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  padding: 20px;  
+  object-fit: cover;        /* fills while keeping proportions */
+  display: block;           /* removes inline gaps */
+  max-height: 380px;
 }
 
 
@@ -147,7 +147,8 @@ nav a {
 .flex-container {
   display: flex;
   gap: 20px;
-  padding: 20px;  
+  padding: 10px;
+  object-fit: cover;
 }
 
 
@@ -159,6 +160,8 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 
@@ -184,6 +187,7 @@ nav a {
 
       .flex-item img {
         height: 220px;
+        object-fit: cover;
       }
     }
 
@@ -193,8 +197,6 @@ nav a {
 
 
 <body>
-
-
   <nav>
     <img src="images/logo.png" alt="Logo" class="logo">
     <a href="about.html">About Us</a>
@@ -212,21 +214,23 @@ nav a {
 <div class="container-wrapper">
   <!-- Left box -->
   <div class="container">
-    <h1>Looking to play for volleyball team?</h1>
-    <h2>Hitterz volleyball ensures that there's a team suited for your abilities</h2>
-    <p>Hitterz Sports Club Incorporated was established in 2018 by a group of friends driven by a shared passion for sports.</p>
-    <h2>OUR TEAMS</h2>
-    <h2>Mens Team</h2>
-    <h2>Women's Team</h2>
-    <h2>Mixed Team</h2>
-    <h2>Development Programme</h2>
-    <h2>We are located in the Heart of Auckland</h2>
+  <h1> HITTERZ VOLLEYBALL</h1>
+  <p>Kia Ora Koutou Katoa/</p>
+  <p>
+    Hitterz Volleyball is based in Auckland, providing opportunities for players of all levels to enjoy and grow in the sport of volleyball. While competitive adult playing numbers are developing, the main focus of Hitterz Volleyball is on <strong>"building the game"</strong> through youth engagement, regional training sessions, and school competitions.  
+    Each year, Hitterz runs <strong>social volleyball</strong> for both indoor and outdoor formats, including grass and beach tournaments, across communities in Auckland.  
+    Competitive teams enter <strong>Northern Zone League</strong> and Auckland-based competitions during the season from July to September, followed by the <strong>National Club Championships</strong> in October.  
+    At a representative level, IPC teams (Youth U19 and adult) are selected annually to compete at the <strong>Inter-Provincial Championships</strong>, held at a North Island venue in June.  
+    During the summer, <strong>Beach Volleyball</strong> is offered at both social and competitive (AA) levels across Auckland beaches. One of the highlights on the calendar is the <strong>Hitterz Slam</strong>, which takes place in late January at Auckland’s North Shore beaches and is part of the <strong>National Beach Volleyball Tour</strong>.
+  </p>
+
+
   </div>
 
 
   <!-- Right box -->
   <div class="container-2">
-    <img src="header.jpg" alt="Volleyball Image">
+    <img src="images/logo3.png" alt="">
   </div>
 </div>
 
