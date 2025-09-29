@@ -7,19 +7,23 @@
   <style>
     #HitterzVolleyball {
       /* Styles with background */
-      background-image:url('Untitled-presentation.jpg');
+      background-image: url('images/Header.png');
       background-size: cover;       /* entire thing gets covered so none of the image gets cut off */
       background-position: center;  /* image becomes more centered */
       background-repeat: no-repeat;
-      color: white;                 /* text is more readable on header */
+      color: #ff7300;                 /* text is more readable on header */
       height: 550px;                /* height of header box */
       display: flex;                /*text is vertical (header)*/
       align-items: center;
       justify-content: center;
       padding: 0 20px;
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* text is more readable */
+       font-size: 3rem;              /* nice big header */
+  font-weight: 900;             /* very bold */
+  color: #ff4800;                  /* dark gray, easier on eyes than pure black */
+  text-shadow: 2px 2px 300x rgba(235, 116, 61, 0.3); /* soft shadow */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* clean font */
+  letter-spacing: 1px;          /* slight spacing for readability */
+  text-align: center;           /* centers the header */
     }
 
 
@@ -41,7 +45,7 @@
 
   body {
   font-family: 'Roboto', sans-serif;
-  background-color: #faf0ca;
+  background-color: #ff941b;
   padding: 0;
   margin: 0;
 }
@@ -87,28 +91,33 @@
 
 
 
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
 
 
-    nav {
-      text-align: center;
-      margin: 20px 0;
-    }
+/* Logo styling */
+.logo {
+  height: 60px;   /* small logo */
+  width: auto;
+  vertical-align: middle; /* aligns logo with links */
+  margin-right: 15px;      /* spacing after logo */
+}
 
 
-
-
-
-
-
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-    }
+nav a {
+  background-color: #ff7300;  
+  padding: 10px;  
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
    
      /* Wrapper for left & right top boxes */
+
+
 .container-wrapper {
   display: flex;
   gap: 20px;
@@ -249,6 +258,7 @@
 
 
   <nav>
+    <img src="images/logo.png" alt="Logo" class="logo">
     <a href="about.html">About Us</a>
     <a href="womens-team.html">Women's Team</a>
     <a href="mens-team.html">Men's Team</a>
@@ -269,7 +279,7 @@
 
 
 
-  <h1 id="HitterzVolleyball">HitterzVolleyball</h1>
+  <h1 id="HitterzVolleyball">HITTERZ VOLLEYBALL</h1>
 
 
 <div class="container-wrapper">
@@ -291,7 +301,7 @@
 
   <!-- Right box -->
   <div class="container-2">
-    <img src="your-image.jpg" alt="Volleyball Image">
+    <img src="header.jpg" alt="Volleyball Image">
   </div>
 </div>
 
@@ -396,9 +406,5 @@
 
 
 
-
-
 </body>
 </html>
-
-
