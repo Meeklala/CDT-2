@@ -28,11 +28,15 @@
     }
 
 
+
+
 @font-face {
   font-family: 'Roboto';
   src: url('roboto_regular.woff') format('woff');
   font-weight: normal;
 }
+
+
 
 
 @font-face {
@@ -42,12 +46,16 @@
 }
 
 
+
+
   body {
   font-family: 'Roboto', sans-serif;
   background-color: #ff941b;
   padding: 0;
   margin: 0;
 }
+
+
 
 
 /* Make table bigger and readable */
@@ -61,6 +69,8 @@
 }
 
 
+
+
 /* Header styling */
 #Table th {
   background-color: #ff7300;   /* orange header */
@@ -71,11 +81,15 @@
 }
 
 
+
+
 /* Row styling */
 #Table td {
   padding: 12px;
   border-bottom: 1px solid #ddd;
 }
+
+
 
 
 /* Zebra stripes for rows */
@@ -84,11 +98,15 @@
 }
 
 
+
+
 /* Hover effect for interactivity */
 #Table tr:hover {
   background-color: #ffd89d;
   cursor: pointer;
 }
+
+
 
 
 /* Optional: card-like shadow around table */
@@ -99,10 +117,16 @@
 }
 
 
+
+
 nav {
   text-align: center;
   margin: 20px 0;
 }
+
+
+
+
 
 
 
@@ -114,6 +138,10 @@ nav {
   vertical-align: middle; /* aligns logo with links */
   margin-right: 15px;      /* spacing after logo */
 }
+
+
+
+
 
 
 
@@ -130,6 +158,8 @@ nav a {
  /* Wrapper for left & right top boxes */
 
 
+
+
 .container-wrapper {
   display: flex;
   gap: 20px;
@@ -137,6 +167,14 @@ nav a {
   margin-bottom: 20px;
   padding: 10px;  
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -155,6 +193,8 @@ nav a {
 }
 
 
+
+
 .container {
   font-family: 'Oswald', sans-serif;
   font-size: 1.05rem;
@@ -164,12 +204,16 @@ nav a {
 }
 
 
+
+
 .container h1,
 .container p {
   max-width: 1000px;
   margin: 0 auto 20px;
   text-align: left;  
 }
+
+
 
 
 /* Right box */
@@ -185,6 +229,8 @@ nav a {
 }
 
 
+
+
 .container-2 img {
   width: 100%;
   height: 100%;
@@ -192,6 +238,8 @@ nav a {
   display: block;           /* removes inline gaps */
   max-height: 380px;
 }
+
+
 
 
 .myButton {
@@ -211,9 +259,15 @@ nav a {
 }
 
 
+
+
 .myButton:hover {
   background: linear-gradient(to bottom, #ff2600 5%, #ff2600 100%);
 }
+
+
+
+
 
 
 
@@ -222,6 +276,8 @@ nav a {
   position: relative;
   top: 1px;
 }
+
+
 
 
 .button-container {
@@ -233,62 +289,55 @@ nav a {
 }
 
 
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;  /* space between images on flex components */
-      padding: 20px;
-    }
+/* Posters Grid */
+.poster-grid {
+  display: flex;
+  flex-wrap: wrap;           /* lets items wrap to next row */
+  gap: 20px;                 /* spacing between posters */
+  justify-content: center;   /* center posters on row */
+  margin: 20px auto;
+  max-width: 1200px;         /* keeps grid centered and not too wide */
+}
+
+
+.poster {
+  flex: 1 1 calc(25% - 20px); /* 4 per row on large screens */
+  box-sizing: border-box;
+}
+
+
+.poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow:  0 6px 15px rgba(0,0,0,0.6); /* darker shadow */
+  transition: transform 0.3s;
+}
+
+
+/* Tablet: 2 per row */
+@media (max-width: 900px) {
+  .poster {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+
+/* Mobile: 1 per row */
+@media (max-width: 600px) {
+  .poster {
+    flex: 1 1 100%;
+  }
+}
 
 
 
 
-
-
-
-
-    .flex-item {
-      flex: 1 1 calc((100% - 20px) / 3);  
-   /* 3 columns is the automatic layout for bigger screens */
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-    }
-
-
-
-
-
-
-
-
-    .flex-item img {
-      width: 100%;
-      max-width: 500px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-
-
-
-
-
-
-
-    /* screens for two columns, it will change it for      screens that are medium sized */
+    /* screens for two columns it will change for screens that are medium sized */
     @media (max-width: 900px) {
       .flex-item {
-        flex: 1 1 calc((100% - 10px) / 2);  
-    /* 2 columns with 10px gap */
+        flex: 1 1 calc((100% - 10px) / 2);  /* 2 columns with 10px gap */
       }
-
-
-
-
 
 
 
@@ -301,12 +350,8 @@ nav a {
 
 
 
-
-
-
-
     /* screens for smaller sized screens */
-    @media (max-width: 600px) {
+    @media (max-width: 100px) {
       .flex-item {
         flex: 1 1 100%;  /* width of screen fixed */
       }
@@ -314,16 +359,10 @@ nav a {
 
 
 
-
-
-
-
       .flex-item img {
         height: 220px;
+        object-fit: cover;
       }
-    }
-
-
 
 
 
@@ -336,9 +375,13 @@ nav a {
 }
 
 
+
+
 td {
   padding: 10px;
 }
+
+
 
 
 td img {
@@ -351,7 +394,11 @@ td img {
 }
 
 
+
+
     }
+
+
 
 
     footer {
@@ -369,9 +416,13 @@ td img {
 }
 
 
+
+
   </style>
 </head>
 <body>
+
+
 
 
   <nav>
@@ -383,6 +434,8 @@ td img {
   <a href="gallery.html">Gallery</a>
   <a href="clips.html">Clips</a>
 </nav>
+
+
 
 
   <h1 id="HitterzVolleyball">HITTERZ VOLLEYBALL</h1>
@@ -410,6 +463,8 @@ td img {
 </div>
 
 
+
+
 <div class="container-wrapper">
   <!-- Left box -->
   <div class="container">
@@ -424,11 +479,15 @@ td img {
   </div>
 
 
+
+
   <!-- Right box -->
   <div class="container-2">
     <img src="images/logo3.png" alt="">
   </div>
 </div>
+
+
 
 
 <div class="button-container">
@@ -438,38 +497,19 @@ td img {
 </div>
 
 
- <table>
-    <tr>
-      <td><img src="images/news digit tech image .png" alt="Image 1"></td>
-      <td><img src="images/news digit tech image  (1).png" alt="Image 2"></td>
-      <td><img src="images/news digit tech image  (2).png" alt="Image 3"></td>
-      <td><img src="images/news digit tech image  (3).png" alt="Image 4"></td>
-    </tr>
-  </table>
 
 
-  <div class="flex-container">
-    <div class="flex-item">
-      <img src="images/Header.png" alt="">
-    </div>
-    <div class="flex-item">
-      <img src="Image 2" alt="Image 2">
-    </div>
-    <div class="flex-item">
-      <img src="Image 3" alt="Image 3">
-    </div>
-    <div class="flex-item">
-      <img src="Image 4" alt="Image 4">
-    </div>
-    <div class="flex-item">
-      <img src="" alt="Image 5">
-    </div>
-    <div class="flex-item">
-      <img src="" alt="Image 6">
-    </div>
+<!-- Posters Section -->
+<section class="posters">
+  <h2>Latest Happenings</h2>
+  <div class="poster-grid">
+    <div class="poster"><img src="images/news digit tech image  (1).png" alt="Poster 1"></div>
+    <div class="poster"><img src="images/news digit tech image  (2).png" alt="Poster 2"></div>
+    <div class="poster"><img src="images/news digit tech image  (3).png" alt="Poster 3"></div>
+    <div class="poster"><img src="images/news digit tech image .png" alt="Poster 4"></div>
+    <!-- Add more posters as needed -->
   </div>
-
-
+</section>
 
 
 
@@ -479,10 +519,14 @@ td img {
   <h2>• Men's Team @ Northern Zone</h2>
 
 
+
+
   <div class="placement-box">
     <h2>Gallery</h2>
     <p>volleyball</p>
   </div>
+
+
 
 
   <h1>Thank you to our sponsors</h1>
@@ -498,3 +542,6 @@ td img {
 
 </body>
 </html>
+
+
+
