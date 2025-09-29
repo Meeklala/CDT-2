@@ -32,8 +32,6 @@
   src: url('roboto_regular.woff') format('woff');
   font-weight: normal;
 }
-
-
 @font-face {
   font-family: 'Roboto';
   src: url('roboto_bold.woff') format('woff');
@@ -49,24 +47,52 @@
 }
 
 
-    table {
-      font-size: 18px;
-      width: 700px;
-      margin: 40px auto;
-      border-spacing: 60px 5px;
-      text-align: center;
-    }
+/* Make table bigger and readable */
+#Table {
+  width: 80%;                  /* takes most of the page width */
+  margin: 20px auto;           /* center on page */
+  font-size: 1.1rem;           /* slightly larger text */
+  border-collapse: collapse;  
+  text-align: center;           /* center text in cells */
+}
 
 
-    th {
-      font-weight: bold;
-      border-bottom: 1px dashed black;
-    }
+/* Header styling */
+#Table th {
+  background-color: #ff7300;   /* orange header */
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
 
-    td {
-      vertical-align: top;
-    }
+/* Row styling */
+#Table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* Zebra stripes for rows */
+#Table tr: {
+  background-color: #f9f9f9;
+}
+
+
+/* Hover effect for interactivity */
+#Table tr:hover {
+  background-color: #ffe0b3;
+  cursor: pointer;
+}
+
+
+/* Optional: card-like shadow around table */
+#Table {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
 
 
 nav {
@@ -92,8 +118,8 @@ nav a {
   font-weight: bold;
   color: #333;
 }
-
-
+   
+     /* Wrapper for left & right top boxes */
 .container-wrapper {
   display: flex;
   gap: 20px;
@@ -101,18 +127,14 @@ nav a {
   margin-bottom: 20px;
   padding: 10px;  
 }
-
-
 /* Left box */
 .container {
   flex: 1;
   padding: 10px;
   box-sizing: border-box;
-  background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.3);
 }
-
-
 .container {
   font-family: 'Oswald', sans-serif;
   font-size: 1.05rem;
@@ -120,15 +142,20 @@ nav a {
   color: #333;
   border-radius: 15px;
 }
-
-
+.container h1,
+.container p {
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  text-align: left;  
+}
 /* Right box */
 .container-2 {
   width: 400px;
   height: 100%;             /* ensure it stretches with the flex wrapper */
   padding: 0;               /* remove padding so image can touch edges */
   box-sizing: border-box;
-  background-color: white;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;            /* allows child image to stretch */
 }
@@ -155,16 +182,16 @@ nav a {
 .box {
   flex: 1;
   height: 150px;
-  background-color: rgb(109, 84, 84);
+  background-color: rgb(255, 153, 37);
   padding: 20px;  
   display: flex;
   align-items: center;
   justify-content: center;
   object-fit: cover;
   border-radius: 15px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.3);
 }
-
-
     /* screens for two columns it will change for screens that are medium sized */
     @media (max-width: 900px) {
       .flex-item {
@@ -176,15 +203,11 @@ nav a {
         height: 250px;
       }
     }
-
-
     /* screens for smaller sized screens */
     @media (max-width: 100px) {
       .flex-item {
         flex: 1 1 100%;  /* width of screen fixed */
       }
-
-
       .flex-item img {
         height: 220px;
         object-fit: cover;
@@ -197,6 +220,8 @@ nav a {
 
 
 <body>
+
+
   <nav>
     <img src="images/logo.png" alt="Logo" class="logo">
     <a href="about.html">About Us</a>
@@ -214,8 +239,7 @@ nav a {
 <div class="container-wrapper">
   <!-- Left box -->
   <div class="container">
-  <h1> HITTERZ VOLLEYBALL</h1>
-  <p>Kia Ora Koutou Katoa/</p>
+  <h1> Kia Ora // Kamusta </h1>
   <p>
     Hitterz Volleyball is based in Auckland, providing opportunities for players of all levels to enjoy and grow in the sport of volleyball. While competitive adult playing numbers are developing, the main focus of Hitterz Volleyball is on <strong>"building the game"</strong> through youth engagement, regional training sessions, and school competitions.  
     Each year, Hitterz runs <strong>social volleyball</strong> for both indoor and outdoor formats, including grass and beach tournaments, across communities in Auckland.  
@@ -235,15 +259,7 @@ nav a {
 </div>
 
 
-<!-- Three boxes underneath -->
-<div class="flex-container">
-  <div class="box">Box 1</div>
-  <div class="box">Box 2</div>
-  <div class="box">Box 3</div>
-</div>
-
-
-  <div style="text-align: center;">
+<div style="text-align: center;">
     <table id="Table">
       <tr>
         <th>Day</th>
@@ -265,6 +281,14 @@ nav a {
       </tr>
     </table>
   </div>
+
+
+<!-- Three boxes underneath -->
+<div class="flex-container">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</div>
 
 
   <h1>UPCOMING GAMES AND TOURNAMENTS TO LOOK OUT FOR</h1>
