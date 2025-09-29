@@ -25,8 +25,6 @@
   letter-spacing: 1px;          /* slight spacing for readability */
   text-align: center;           /* centers the header */
     }
-
-
 @font-face {
   font-family: 'Roboto';
   src: url('roboto_regular.woff') format('woff');
@@ -37,23 +35,22 @@
   src: url('roboto_bold.woff') format('woff');
   font-weight: bold;
 }
-
-
   body {
   font-family: 'Roboto', sans-serif;
   background-color: #ff941b;
   padding: 0;
   margin: 0;
 }
-
-
-/* Make table bigger and readable */
+/* Base table styling */
 #Table {
   width: 80%;                  /* takes most of the page width */
   margin: 20px auto;           /* center on page */
   font-size: 1.1rem;           /* slightly larger text */
-  border-collapse: collapse;  
-  text-align: center;           /* center text in cells */
+  border-collapse: collapse;   /* remove double borders */
+  text-align: center;          /* center text in cells */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* card-like shadow */
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 
@@ -67,38 +64,39 @@
 }
 
 
-/* Row styling */
+/* Cell styling */
 #Table td {
   padding: 12px;
   border-bottom: 1px solid #ddd;
 }
 
 
-/* Zebra stripes for rows */
-#Table tr: {
-  background-color: #f9f9f9;
+/* Zebra stripes */
+#Table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray background for even rows */
 }
 
 
-/* Hover effect for interactivity */
+#Table tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+
+/* Hover effect */
 #Table tr:hover {
-  background-color: #ffe0b3;
+  background-color: #ffe0b3; /* soft orange highlight */
   cursor: pointer;
 }
 
 
-/* Optional: card-like shadow around table */
-#Table {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
 
 
 nav {
   text-align: center;
   margin: 20px 0;
 }
+
+
 
 
 /* Logo styling */
@@ -108,6 +106,8 @@ nav {
   vertical-align: middle; /* aligns logo with links */
   margin-right: 15px;      /* spacing after logo */
 }
+
+
 
 
 nav a {
@@ -120,6 +120,10 @@ nav a {
 }
    
      /* Wrapper for left & right top boxes */
+
+
+
+
 .container-wrapper {
   display: flex;
   gap: 20px;
@@ -135,6 +139,8 @@ nav a {
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+
 .container {
   font-family: 'Oswald', sans-serif;
   font-size: 1.05rem;
@@ -142,6 +148,8 @@ nav a {
   color: #333;
   border-radius: 15px;
 }
+
+
 .container h1,
 .container p {
   max-width: 1000px;
@@ -168,8 +176,6 @@ nav a {
   display: block;           /* removes inline gaps */
   max-height: 380px;
 }
-
-
 /* Three boxes underneath */
 .flex-container {
   display: flex;
@@ -181,16 +187,23 @@ nav a {
 
 .box {
   flex: 1;
-  height: 150px;
-  background-color: rgb(255, 153, 37);
-  padding: 20px;  
+  height: 300px;               /* a bit taller for balance */
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  object-fit: cover;
   border-radius: 15px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;            /* makes image corners follow radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills box neatly */
+  display: block;      /* removes extra spacing */
 }
     /* screens for two columns it will change for screens that are medium sized */
     @media (max-width: 900px) {
@@ -203,11 +216,15 @@ nav a {
         height: 250px;
       }
     }
+
+
     /* screens for smaller sized screens */
     @media (max-width: 100px) {
       .flex-item {
         flex: 1 1 100%;  /* width of screen fixed */
       }
+
+
       .flex-item img {
         height: 220px;
         object-fit: cover;
@@ -215,25 +232,60 @@ nav a {
     }
 
 
+    footer {
+  text-align: center;
+  padding: 20px 40px;            /* more padding for comfort */
+  margin: 40px auto 20px auto;   /* space above and below */
+  background-color: rgba(255, 255, 255, 0.3); /* semi-transparent white */
+  backdrop-filter: blur(10px);   /* nice frosted glass effect */
+  border-radius: 20px;            /* rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* soft shadow */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  max-width: 1000px;             /* keeps the box from stretching too wide */
+}
+
+
   </style>
 </head>
 
 
 <body>
-
-
   <nav>
-    <img src="images/logo.png" alt="Logo" class="logo">
-    <a href="about.html">About Us</a>
-    <a href="womens-team.html">Women's Team</a>
-    <a href="mens-team.html">Men's Team</a>
-    <a href="association-club-contacts.html">Association/Club Contacts</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="clips.html">Clips</a>
-  </nav>
+  <img src="images/logo.png" alt="Logo" class="logo">
+  <a href="about.html">About Us</a>
+  <a href="womens-team.html">Women's Team</a>
+  <a href="mens-team.html">Men's Team</a>
+  <a href="association-club-contacts.html">Get involved</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="clips.html">Clips</a>
+</nav>
 
 
   <h1 id="HitterzVolleyball">HITTERZ VOLLEYBALL</h1>
+  <div class="schedule-box">
+  <table id="Table">
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Activity</th>
+      <th>Where</th>
+    </tr>
+    <tr>
+      <td>Sunday</td>
+      <td>5:50–8:30 PM</td>
+      <td>Women's Team Training</td>
+      <td>Selwyn College – Small Gym</td>
+    </tr>
+    <tr>
+      <td>Saturday</td>
+      <td>5:50–8:30 PM</td>
+      <td>Men's Team Training</td>
+      <td>Selwyn College – Small Gym</td>
+    </tr>
+  </table>
+</div>
 
 
 <div class="container-wrapper">
@@ -259,35 +311,17 @@ nav a {
 </div>
 
 
-<div style="text-align: center;">
-    <table id="Table">
-      <tr>
-        <th>Day</th>
-        <th>Time</th>
-        <th>Activity</th>
-        <th>Where</th>
-      </tr>
-      <tr>
-        <td>Sunday</td>
-        <td>5:50–8:30 PM</td>
-        <td>Women's Team Training</td>
-        <td>Selwyn College – Small Gym</td>
-      </tr>
-      <tr>
-        <td>Saturday</td>
-        <td>5:50–8:30 PM</td>
-        <td>Men's Team Training</td>
-        <td>Selwyn College – Small Gym</td>
-      </tr>
-    </table>
-  </div>
-
-
 <!-- Three boxes underneath -->
 <div class="flex-container">
-  <div class="box">Box 1</div>
-  <div class="box">Box 2</div>
-  <div class="box">Box 3</div>
+  <div class="box">
+    <img src="images/icons for website.png" alt="Box 1 image">
+  </div>
+  <div class="box">
+    <img src="images/icons for website (1).png" alt="Box 2 image">
+  </div>
+  <div class="box">
+    <img src="images/icons for website (2).png" alt="Box 3 image">
+  </div>
 </div>
 
 
