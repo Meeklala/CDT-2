@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Men's Team - Hitterz Volleyball</title>
+  <title>Women's Team - Hitterz Volleyball</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <style>
 /* BASE STYLES */
@@ -13,17 +13,20 @@ body {
   padding: 0;
 }
 
+
 /* NAVIGATION */
 nav {
   text-align: center;
   margin: 20px 0;
 }
 
+
 nav .logo {
   height: 60px;
   vertical-align: middle;
   margin-right: 15px;
 }
+
 
 nav a {
   background-color: #ff7300;
@@ -34,9 +37,10 @@ nav a {
   color: #333;
 }
 
+
 /* MAIN HEADER */
 #HitterzVolleyball {
-  background-image: url('');
+  background-image: url('images/womens\ header.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -51,6 +55,7 @@ nav a {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
+
 
 /* NEW HEADER STYLE */
 .header-custom {
@@ -74,6 +79,9 @@ nav a {
 
 
 
+
+
+
 /* LEFT & RIGHT BOXES */
 .container-wrapper {
   display: flex;
@@ -81,6 +89,7 @@ nav a {
   margin-bottom: 20px;
   padding: 10px;
 }
+
 
 .container {
   flex: 1;
@@ -96,6 +105,9 @@ nav a {
 
 
 
+
+
+
 .container-2 {
   width: 400px;
   display: flex;
@@ -106,6 +118,7 @@ nav a {
   border-radius: 10px;
 }
 
+
 .container-2 img {
   width: 100%;
   height: 100%;
@@ -114,6 +127,8 @@ nav a {
   max-height: 380px;
   border-radius: 10px;
 }
+
+
 
 
 /* HEADERS CENTERED */
@@ -126,8 +141,10 @@ h2, .sponsors-header {
   margin: 40px 0;
 }
 
+
 .sponsors-header { font-size: 60px; }
 h2 { font-size: 50px; }
+
 
 /* SPONSOR LOGOS */
 .sponsor-logos {
@@ -139,6 +156,7 @@ h2 { font-size: 50px; }
   max-width: 1000px;
 }
 
+
 .sponsor-logos img {
   height: 100px;
   width: auto;
@@ -148,9 +166,11 @@ h2 { font-size: 50px; }
   transition: transform 0.3s;
 }
 
+
 .sponsor-logos img:hover {
   transform: scale(1.1);
 }
+
 
 /* FOOTER */
 footer {
@@ -167,21 +187,46 @@ footer {
   max-width: 1000px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .poster { flex: 0 1 45%; }
-  .container-2 { width: 100%; max-height: 300px; }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* space between images */
 }
 
-@media (max-width: 600px) {
-  .poster { flex: 0 1 90%; }
-  #HitterzVolleyball { font-size: 50px; }
-  .sponsors-header { font-size: 40px; }
-  h2 { font-size: 35px; }
+
+.flex-item-left {
+  flex: calc(100% / 6 - 10px); /* 6 images per row minus gap */
 }
+
+
+.flex-item-left img {
+  width: 100%;
+  height: 300px; /* adjust as needed */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+/* Responsive layout - stack images on smaller screens */
+@media (max-width: 800px) {
+  .flex-item-left {
+    flex: 50%; /* 2 images per row */
+  }
+}
+
+
+@media (max-width: 500px) {
+  .flex-item-left {
+    flex: 100%; /* 1 image per row */
+  }
+}
+
+
 </style>
 </head>
 <body>
+
 
 <nav>
   <img src="images/logo.png" alt="Logo" class="logo">
@@ -191,31 +236,84 @@ footer {
   <a href="association-club-contacts.html">Get involved</a>
 </nav>
 
-<h1 id="HitterzVolleyball">Get involved !</h1>
 
-<h1 class="header-custom">Men's Team Takeover</h1>
-<p class="subheading">Every weekend this 2025 season</p>
+<h1 id="HitterzVolleyball">WOMEN'S TEAM</h1>
+
+
+<h1 class="header-custom">Women's Team Takeover</h1>
+<p class="subheading"></p>
+
+
 
 
 <div class="container-wrapper">
   <!-- Left box -->
   <div class="container">
-  <h1> Welcome to the mens volleyball team - Hitterz volleyball</h1>
+  <h1>Women's team - Hitterz volleyball</h1>
   <p>
-    <!--write something here-->
-  </p>
+  The Hitterz Women’s Volleyball Team is built on passion, perseverance, and teamwork. 
+  Our players are committed to improving both individually and as a unit — learning, training, 
+  and pushing each other to reach new levels of excellence. Each practice and every match 
+  reflect our dedication to representing Hitterz Volleyball with pride and sportsmanship.
+
+  Our ultimate goal this season is to bring home the championship title. 
+  But winning means more to us than just points on the scoreboard — it’s about 
+  growing together as athletes, supporting one another, and building a legacy 
+  for future generations of Hitterz players. We strive to combine discipline and 
+  determination with the joy of the game, proving that hard work and unity 
+  lead to victory both on and off the court.
+
+  As we continue our journey, we remain focused on our goals: to train harder, 
+  play smarter, and win stronger. The Hitterz Women’s Team is not just chasing trophies — 
+  we’re creating history.
+
+</p>
   </div>
+
+
 
 
   <div class="container-2">
-    <img src="" alt="">
+    <img src="images/logo3.png" alt="">
   </div>
 </div>
+
+<h1 class="sponsors-header">Player Showcase</h1>
+
+<div class="flex-container">
+  <!-- Row 1 -->
+  <div class="flex-item-left"><img src="images/tshirt 1.png" alt="Image 1"></div>
+  <div class="flex-item-left"><img src="images/lian.png" alt="Image 2"></div>
+  <div class="flex-item-left"><img src="images/mp.png" alt="Image 3"></div>
+  <div class="flex-item-left"><img src="images/mika.png" alt="Image 4"></div>
+  <div class="flex-item-left"><img src="images/ramos.png" alt="Image 5"></div>
+  <div class="flex-item-left"><img src="images/ybus.png" alt="Image 6"></div>
+
+
+  <!-- Row 2 -->
+  <div class="flex-item-left"><img src="images/althea.png" alt="Image 7"></div>
+  <div class="flex-item-left"><img src="images/marj.png" alt="Image 8"></div>
+  <div class="flex-item-left"><img src="images/frances.png" alt="Image 9"></div>
+  <div class="flex-item-left"><img src="images/joey.png" alt="Image 10"></div>
+  <div class="flex-item-left"><img src="images/andrea.png" alt="Image 11"></div>
+  <div class="flex-item-left"><img src="images/lara.png" alt="Image 12"></div>
+
+
+  <!-- Row 3 -->
+  <div class="flex-item-left"><img src="images/ash.png" alt="Image 13"></div>
+  <div class="flex-item-left"><img src="images/bhelle.png" alt="Image 14"></div>
+  <div class="flex-item-left"><img src="images/carol.png" alt="Image 15"></div>
+  <div class="flex-item-left"><img src="image16.jpg" alt=""></div>
+  <div class="flex-item-left"><img src="image17.jpg" alt=""></div>
+  <div class="flex-item-left"><img src="image18.jpg" alt=""></div>
+</div>
+
 
 
 
 <!-- Sponsors Section -->
 <h1 class="sponsors-header">Thank you to our sponsors</h1>
+
 
 <div class="sponsor-logos">
   <img src="images/right education.png" alt="">
@@ -223,9 +321,12 @@ footer {
 </div>
 
 
+
+
 <footer>
   <p>2025 Hitterz Volleyball Club Auckland Incorporated. All rights reserved.</p>
 </footer>
+
 
 </body>
 </html>
