@@ -4,329 +4,79 @@
   <meta charset="utf-8">
   <title>Women's Team - Hitterz Volleyball</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<style>
-/* BASE STYLES */
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #ff941b;
-  margin: 0;
-  padding: 0;
-}
-
-
-/* NAVIGATION */
-nav {
-  text-align: center;
-  margin: 20px 0;
-}
-
-
-nav .logo {
-  height: 60px;
-  vertical-align: middle;
-  margin-right: 15px;
-}
-
-
-nav a {
-  background-color: #ff7300;
-  padding: 10px;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #333;
-}
-
-
-/* MAIN HEADER */
-#HitterzVolleyball {
-  background-image: url('images/womens\ header.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 550px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 80px;
-  font-weight: 900;
-  color: #ffffff;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.4), -3px -3px 6px rgba(0,0,0,0.4);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-}
-
-
-/* NEW HEADER STYLE */
-.header-custom {
-  text-align: center;
-  color: #ffffff;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 48px;            /* adjust size as needed */
-  margin: 40px 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* black shadow */
-}
-.subheading {
-  text-align: center;          /* centers the text under the header */
-  color: #ffffff;              /* white color */
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;            /* medium weight */
-  font-size: 24px;             /* smaller than header */
-  margin-top: -10px;           /* optional, adjusts spacing between header and subheading */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* subtle shadow for readability */
-}
-
-
-
-
-
-
-/* LEFT & RIGHT BOXES */
-.container-wrapper {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
-}
-
-
-.container {
-  flex: 1;
-  padding: 10px;
-  background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-
-
-
-
-
-.container-2 {
-  width: 400px;
-  display: flex;
-  padding: 0;
-  background-color: rgba(255,255,255,0.3);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  border-radius: 10px;
-}
-
-
-.container-2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  max-height: 380px;
-  border-radius: 10px;
-}
-
-
-
-
-/* HEADERS CENTERED */
-h2, .sponsors-header {
-  text-align: center;
-  color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* black shadow */
-  font-weight: 900;
-  margin: 40px 0;
-}
-
-
-.sponsors-header { font-size: 60px; }
-h2 { font-size: 50px; }
-
-
-/* SPONSOR LOGOS */
-.sponsor-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: 20px auto 60px auto;
-  max-width: 1000px;
-}
-
-
-.sponsor-logos img {
-  height: 100px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
-  transition: transform 0.3s;
-}
-
-
-.sponsor-logos img:hover {
-  transform: scale(1.1);
-}
-
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px 40px;
-  margin: 40px auto 20px auto;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  color: #333;
-  max-width: 1000px;
-}
-
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; /* space between images */
-}
-
-
-.flex-item-left {
-  flex: calc(100% / 6 - 10px); /* 6 images per row minus gap */
-}
-
-
-.flex-item-left img {
-  width: 100%;
-  height: 300px; /* adjust as needed */
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-
-/* Responsive layout - stack images on smaller screens */
-@media (max-width: 800px) {
-  .flex-item-left {
-    flex: 50%; /* 2 images per row */
-  }
-}
-
-
-@media (max-width: 500px) {
-  .flex-item-left {
-    flex: 100%; /* 1 image per row */
-  }
-}
-
-
-</style>
+  <body class="women">
+  
+  <!-- LINK YOUR STYLESHEET HERE -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <nav>
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <a href="index.html">About Us</a>
+    <a href="womens-team.html">Women's Team</a>
+    <a href="mens-team.html">Men's Team</a>
+    <a href="association-club-contacts.html">Get Involved</a>
+  </nav>
 
+  <h1 id="HitterzVolleyball" class="women">WOMEN'S TEAM</h1>
 
-<nav>
-  <img src="images/logo.png" alt="Logo" class="logo">
-  <a href="index.html">About Us</a>
-  <a href="womens-team.html">Women's Team</a>
-  <a href="mens-team.html">Men's Team</a>
-  <a href="association-club-contacts.html">Get involved</a>
-</nav>
+  <h1 class="header-custom">Women's Team Takeover</h1>
+  <p class="subheading"></p>
 
+  <div class="container-wrapper">
+    <!-- Left box -->
+    <div class="container">
+      <h1>Women's Team - Hitterz Volleyball</h1>
+      <p>
+        The Hitterz Women’s Volleyball Team is built on passion, perseverance, and teamwork. 
+        Our players are committed to improving both individually and as a unit — learning, training, 
+        and pushing each other to reach new levels of excellence. Each practice and every match 
+        reflect our dedication to representing Hitterz Volleyball with pride and sportsmanship.
+        <br><br>
+        Our ultimate goal this season is to bring home the championship title. 
+        But winning means more to us than just points on the scoreboard — it’s about 
+        growing together as athletes, supporting one another, and building a legacy 
+        for future generations of Hitterz players. 
+      </p>
+    </div>
 
-<h1 id="HitterzVolleyball">WOMEN'S TEAM</h1>
-
-
-<h1 class="header-custom">Women's Team Takeover</h1>
-<p class="subheading"></p>
-
-
-
-
-<div class="container-wrapper">
-  <!-- Left box -->
-  <div class="container">
-  <h1>Women's team - Hitterz volleyball</h1>
-  <p>
-  The Hitterz Women’s Volleyball Team is built on passion, perseverance, and teamwork. 
-  Our players are committed to improving both individually and as a unit — learning, training, 
-  and pushing each other to reach new levels of excellence. Each practice and every match 
-  reflect our dedication to representing Hitterz Volleyball with pride and sportsmanship.
-
-  Our ultimate goal this season is to bring home the championship title. 
-  But winning means more to us than just points on the scoreboard — it’s about 
-  growing together as athletes, supporting one another, and building a legacy 
-  for future generations of Hitterz players. We strive to combine discipline and 
-  determination with the joy of the game, proving that hard work and unity 
-  lead to victory both on and off the court.
-
-  As we continue our journey, we remain focused on our goals: to train harder, 
-  play smarter, and win stronger. The Hitterz Women’s Team is not just chasing trophies — 
-  we’re creating history.
-
-</p>
+    <div class="container-2">
+      <img src="images/logo3.png" alt="">
+    </div>
   </div>
 
+  <h1 class="sponsors-header">Player Showcase</h1>
 
-
-
-  <div class="container-2">
-    <img src="images/logo3.png" alt="">
+  <div class="flex-container">
+    <div class="flex-item-left"><img src="images/tshirt 1.png" alt="Image 1"></div>
+    <div class="flex-item-left"><img src="images/lian.png" alt="Image 2"></div>
+    <div class="flex-item-left"><img src="images/mp.png" alt="Image 3"></div>
+    <div class="flex-item-left"><img src="images/mika.png" alt="Image 4"></div>
+    <div class="flex-item-left"><img src="images/ramos.png" alt="Image 5"></div>
+    <div class="flex-item-left"><img src="images/ybus.png" alt="Image 6"></div>
+    <div class="flex-item-left"><img src="images/althea.png" alt="Image 7"></div>
+    <div class="flex-item-left"><img src="images/marj.png" alt="Image 8"></div>
+    <div class="flex-item-left"><img src="images/frances.png" alt="Image 9"></div>
+    <div class="flex-item-left"><img src="images/joey.png" alt="Image 10"></div>
+    <div class="flex-item-left"><img src="images/andrea.png" alt="Image 11"></div>
+    <div class="flex-item-left"><img src="images/lara.png" alt="Image 12"></div>
+    <div class="flex-item-left"><img src="images/ash.png" alt="Image 13"></div>
+    <div class="flex-item-left"><img src="images/bhelle.png" alt="Image 14"></div>
+    <div class="flex-item-left"><img src="images/carol.png" alt="Image 15"></div>
+        <div class="flex-item-left"><img src="" alt=""></div>
+    <div class="flex-item-left"><img src="" alt=""></div>
+    <div class="flex-item-left"><img src="" alt=""></div>
   </div>
-</div>
 
-<h1 class="sponsors-header">Player Showcase</h1>
+  <h1 class="sponsors-header">Thank you to our sponsors</h1>
 
-<div class="flex-container">
-  <!-- Row 1 -->
-  <div class="flex-item-left"><img src="images/tshirt 1.png" alt="Image 1"></div>
-  <div class="flex-item-left"><img src="images/lian.png" alt="Image 2"></div>
-  <div class="flex-item-left"><img src="images/mp.png" alt="Image 3"></div>
-  <div class="flex-item-left"><img src="images/mika.png" alt="Image 4"></div>
-  <div class="flex-item-left"><img src="images/ramos.png" alt="Image 5"></div>
-  <div class="flex-item-left"><img src="images/ybus.png" alt="Image 6"></div>
+  <div class="sponsor-logos">
+    <img src="images/right education.png" alt="">
+  </div>
 
-
-  <!-- Row 2 -->
-  <div class="flex-item-left"><img src="images/althea.png" alt="Image 7"></div>
-  <div class="flex-item-left"><img src="images/marj.png" alt="Image 8"></div>
-  <div class="flex-item-left"><img src="images/frances.png" alt="Image 9"></div>
-  <div class="flex-item-left"><img src="images/joey.png" alt="Image 10"></div>
-  <div class="flex-item-left"><img src="images/andrea.png" alt="Image 11"></div>
-  <div class="flex-item-left"><img src="images/lara.png" alt="Image 12"></div>
-
-
-  <!-- Row 3 -->
-  <div class="flex-item-left"><img src="images/ash.png" alt="Image 13"></div>
-  <div class="flex-item-left"><img src="images/bhelle.png" alt="Image 14"></div>
-  <div class="flex-item-left"><img src="images/carol.png" alt="Image 15"></div>
-  <div class="flex-item-left"><img src="image16.jpg" alt=""></div>
-  <div class="flex-item-left"><img src="image17.jpg" alt=""></div>
-  <div class="flex-item-left"><img src="image18.jpg" alt=""></div>
-</div>
-
-
-
-
-<!-- Sponsors Section -->
-<h1 class="sponsors-header">Thank you to our sponsors</h1>
-
-
-<div class="sponsor-logos">
-  <img src="images/right education.png" alt="">
-  <!-- Add more images -->
-</div>
-
-
-
-
-<footer>
-  <p>2025 Hitterz Volleyball Club Auckland Incorporated. All rights reserved.</p>
-</footer>
-
-
+  <footer>
+    <p>2025 Hitterz Volleyball Club Auckland Incorporated. All rights reserved.</p>
+  </footer>
 </body>
 </html>
