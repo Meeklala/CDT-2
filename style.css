@@ -11,7 +11,7 @@ body {
 /* NAVIGATION */
 nav {
   text-align: center;
-  margin: 20px 0px;
+  margin: 30px 0px;
 }
 
 nav .logo {
@@ -93,17 +93,34 @@ body.contact #HitterzVolleyball {
   padding: 10px;
 }
 
+/* Container Font Styling */
 .container {
   flex: 1;
-  padding: 10px;
+  padding: 15px 20px;
   background-color: #ffffff4d;
   backdrop-filter: blur(5px);
   border-radius: 15px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 17px;
-  line-height: 26px;
+  font-family: 'Roboto', sans-serif; /* changed to Roboto */
+  font-size: 20px; /* bigger text */
+  line-height: 32px; /* adjust line-height to match */
   color: #333;
+  font-weight: 500; /* slightly bolder for style */
+  letter-spacing: 0.3px; /* subtle spacing */
+  text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1); /* soft shadow for depth */
 }
+
+/* H1 Styling */
+h1 {
+  font-family: 'Roboto', sans-serif; /* changed to Roboto */
+  font-size: 60px; /* smaller, more balanced */
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.4), -3px -3px 6px rgba(0,0,0,0.4);
+  margin: 40px 0px;
+  letter-spacing: 0.5px; /* subtle elegance */
+}
+
 
 .container-2 {
   width: 400px;
@@ -120,7 +137,7 @@ body.contact #HitterzVolleyball {
   height: 100%;
   object-fit: cover;
   display: block;
-  max-height: 380px;
+  max-height: 410px;
   border-radius: 10px;
 }
 
