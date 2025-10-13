@@ -4,14 +4,14 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #ff9f3d;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* NAVIGATION */
 nav {
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0px;
 }
 
 nav .logo {
@@ -23,13 +23,12 @@ nav .logo {
 nav a {
   background-color: #ff7300;
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 0px 10px;
   text-decoration: none;
   font-weight: bold;
   color: #000000;
   border-radius: 10px; /* rounded corners */
 }
-
 
 /* MAIN HEADER (All pages) */
 #HitterzVolleyball {
@@ -65,8 +64,6 @@ body.contact #HitterzVolleyball {
   background-image: url('images/club contacts page.png');
 }
 
-
-
 /* HEADERS & TEXT */
 .header-custom {
   text-align: center;
@@ -74,7 +71,7 @@ body.contact #HitterzVolleyball {
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   font-size: 48px;
-  margin: 40px 0;
+  margin: 40px 0px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
@@ -103,18 +100,18 @@ body.contact #HitterzVolleyball {
   backdrop-filter: blur(5px);
   border-radius: 15px;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 26px;
   color: #333;
 }
 
 .container-2 {
   width: 400px;
   display: flex;
-  padding: 0;
+  padding: 0px;
   background-color: rgba(255,255,255,0.3);
   backdrop-filter: blur(5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
@@ -129,14 +126,14 @@ body.contact #HitterzVolleyball {
 
 /* TABLE STYLES */
 #Table {
-  width: 80%;
+  width: 1024px;
   margin: 20px auto;
   border-collapse: collapse;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 18px;
   border: 1px solid #ff5b32;
   background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -146,7 +143,7 @@ body.contact #HitterzVolleyball {
   color: #ffffff;
   padding: 12px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 20px;
 }
 
 #Table tr:nth-child(n+2) {
@@ -162,14 +159,14 @@ body.contact #HitterzVolleyball {
 
 /* Contact Table Styling */
 #contactTable {
-  width: 80%;
+  width: 1024px;
   margin: 20px auto;
   border-collapse: collapse;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 18px;
   border: 1px solid #ff5b32;
   background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -179,7 +176,7 @@ body.contact #HitterzVolleyball {
   color: #ffffff;
   padding: 12px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 20px;
 }
 
 #contactTable td {
@@ -198,7 +195,6 @@ body.contact #HitterzVolleyball {
 #contactTable td a:hover {
   text-decoration: underline;
 }
-
 
 /* POSTERS */
 .poster-grid {
@@ -219,17 +215,17 @@ body.contact #HitterzVolleyball {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.6);
   transition: transform 0.3s;
   display: block;
 }
 
-/*BUTTONS */
+/* BUTTONS */
 .button-container {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin: 30px 0;
+  margin: 30px 0px;
   flex-wrap: wrap;
 }
 
@@ -251,14 +247,14 @@ body.contact #HitterzVolleyball {
   background: linear-gradient(to bottom, #ff2600 5%, #ff2600 100%);
 }
 
-/*SPONSORS*/
+/* SPONSORS */
 h2, .sponsors-header {
   text-align: center;
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   font-weight: 900;
-  margin: 40px 0;
+  margin: 40px 0px;
 }
 
 .sponsors-header { font-size: 60px; }
@@ -278,7 +274,7 @@ h2 { font-size: 50px; }
   width: auto;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+  filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
   transition: transform 0.3s;
 }
 
@@ -312,9 +308,9 @@ footer {
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   color: #333;
   max-width: 1000px;
 }
@@ -329,20 +325,6 @@ footer {
   .flex-item-left { flex: 50%; }
 }
 
-@media (max-width: 600px) {
-  .poster { flex: 0 1 90%; }
-  #HitterzVolleyball { font-size: 50px; }
-  .sponsors-header { font-size: 40px; }
-  h2 { font-size: 35px; }
-  .responsive-form label,
-  .responsive-form input[type=text],
-  .responsive-form input[type=submit],
-  .responsive-form select,
-  .responsive-form textarea {
-    flex: 100%;
-    min-width: 100%;
-  }
-}
 
 @media (max-width: 500px) {
   .flex-item-left { flex: 100%; }
