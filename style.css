@@ -3,7 +3,7 @@
 /* BASE STYLES */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #ff941b;
+  background-color: #ff9f3d;
   margin: 0;
   padding: 0;
 }
@@ -22,12 +22,14 @@ nav .logo {
 
 nav a {
   background-color: #ff7300;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
-  color: #333;
+  color: #000000;
+  border-radius: 10px; /* rounded corners */
 }
+
 
 /* MAIN HEADER (All pages) */
 #HitterzVolleyball {
@@ -41,12 +43,12 @@ nav a {
   font-size: 80px;
   font-weight: 900;
   color: #ffffff;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.4), -3px -3px 6px rgba(0,0,0,0.4);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), -3px -3px 6px rgba(0,0,0,0.4);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
-/* Correct CSS for page-specific headers */
+/* CSS for page-specific headers */
 body.about #HitterzVolleyball {
   background-image: url('images/Header\ \(1\).png');
 }
@@ -97,7 +99,7 @@ body.contact #HitterzVolleyball {
 .container {
   flex: 1;
   padding: 10px;
-  background-color: rgba(255,255,255,0.3);
+  background-color: #ffffff4d;
   backdrop-filter: blur(5px);
   border-radius: 15px;
   font-family: 'Oswald', sans-serif;
@@ -112,7 +114,7 @@ body.contact #HitterzVolleyball {
   padding: 0;
   background-color: rgba(255,255,255,0.3);
   backdrop-filter: blur(5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
@@ -132,7 +134,7 @@ body.contact #HitterzVolleyball {
   border-collapse: collapse;
   text-align: center;
   font-size: 1.1rem;
-  border: 1px solid #ff8432;
+  border: 1px solid #ff5b32;
   background-color: #ffffff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   border-radius: 10px;
@@ -157,6 +159,46 @@ body.contact #HitterzVolleyball {
   border-bottom: 1px solid #ddd;
   color: #333;
 }
+
+/* Contact Table Styling */
+#contactTable {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1.1rem;
+  border: 1px solid #ff5b32;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#contactTable th {
+  background-color: #ff7300;
+  color: #ffffff;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#contactTable td {
+  background-color: #ffffff;
+  color: #333;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Only Gmail/email link hover effect */
+#contactTable td a {
+  color: #333;
+  text-decoration: none;
+}
+
+#contactTable td a:hover {
+  text-decoration: underline;
+}
+
 
 /* POSTERS */
 .poster-grid {
