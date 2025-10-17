@@ -56,19 +56,19 @@ nav a {
 
 /* CSS for page-specific headers */
 body.home #HitterzVolleyball {
-  background-image: url('images/Header\ \(1\).png');
+  background-image: url('images/Header\ \(1\).jpg');
 }
 
 body.women #HitterzVolleyball {
-  background-image: url('images/womens header.png');
+  background-image: url('images/womens\ header.jpg');
 }
 
 body.men #HitterzVolleyball {
-  background-image: url("images/men\'s\ team\ header.png");
+  background-image: url("images/men\'s\ team\ header.jpg");
 }
 
 body.contact #HitterzVolleyball {
-  background-image: url('images/club contacts page.png');
+  background-image: url('images/club\ contacts\ page.jpg');
 }
 
 /* HEADERS & TEXT */
