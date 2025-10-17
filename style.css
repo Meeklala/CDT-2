@@ -12,22 +12,29 @@ body {
 nav {
   text-align: center;
   margin: 30px 0px;
+  display: flex;              /* make nav a flex container */
+  flex-wrap: wrap;            /* allow links to wrap to next line */
+  justify-content: center;    /* center items horizontally */
+  align-items: center;        /* center items vertically */
+  gap: 10px;                  /* spacing between links */
 }
 
 nav .logo {
   height: 60px;
   vertical-align: middle;
   margin-right: 15px;
+  flex-shrink: 0; /* prevent logo from shrinking */
 }
 
 nav a {
   background-color: #ff7300;
   padding: 10px 20px;
-  margin: 0px 10px;
+  margin: 5px;           /* add spacing so wrap looks neat */
   text-decoration: none;
   font-weight: bold;
   color: #000000;
   border-radius: 10px; /* rounded corners */
+  flex-shrink: 0;       /* prevent links from shrinking too much */
 }
 
 /* MAIN HEADER (All pages) */
@@ -109,99 +116,80 @@ body.contact #HitterzVolleyball {
   text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1); /* soft shadow for depth */
 }
 
-/* H1 Styling */
 h1 {
-  font-family: 'Roboto', sans-serif; /* changed to Roboto */
-  font-size: 60px; /* smaller, more balanced */
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
   font-weight: 900;
   color: #ffffff;
   text-align: center;
   text-shadow: 3px 3px 10px rgba(0,0,0,0.4), -3px -3px 6px rgba(0,0,0,0.4);
   margin: 40px 0px;
-  letter-spacing: 0.5px; /* subtle elegance */
+  letter-spacing: 0.5px;
+
+  word-wrap: break-word; /* break long words to next line */
+  overflow-wrap: break-word; /* ensures words wrap properly */
+  line-height: 1.2; /* adds spacing between lines */
 }
 
 
 .container-2 {
-  width: 400px;
+  width: 500px; /* fixed width */
+  height: 500px; /* fixed height */
   display: flex;
-  padding: 0px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   background-color: rgba(255,255,255,0.3);
   backdrop-filter: blur(5px);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .container-2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 500px; /* fixed image size */
+  height: 500px; /* stays consistent */
+  object-fit: cover; /* crop instead of stretch */
   display: block;
-  max-height: cover;
   border-radius: 10px;
 }
 
-/* TABLE STYLES */
-#Table {
-  width: 1024px;
+
+/* Table container styling */
+#Table, #contactTable {
+  width: 90%; /* responsive width */
+  max-width: 1024px;
   margin: 20px auto;
   border-collapse: collapse;
+  padding: 10px;
   text-align: center;
   font-size: 18px;
   border: 1px solid #ff5b32;
-  background-color: #ffffff;
+  background-color: #ffa500; /* table background orange */
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
   border-radius: 10px;
   overflow: hidden;
 }
 
-#Table th {
-  background-color: #ff7300;
-  color: #ffffff;
+/* Table header cells */
+#Table th, #contactTable th {
+  background-color: #ff5b32; /* white headers */
+  color: #333;
   padding: 12px;
   font-weight: bold;
   font-size: 20px;
-}
-
-#Table tr:nth-child(n+2) {
-  background-color: #ffffff;
-  color: #333;
-}
-
-#Table td {
-  padding: 12px;
   border-bottom: 1px solid #ddd;
-  color: #333;
 }
 
-/* Contact Table Styling */
-#contactTable {
-  width: 1024px;
-  margin: 20px auto;
-  border-collapse: collapse;
-  text-align: center;
-  font-size: 18px;
-  border: 1px solid #ff5b32;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-#contactTable th {
-  background-color: #ff7300;
-  color: #ffffff;
-  padding: 12px;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-#contactTable td {
-  background-color: #ffffff;
+/* Table body cells */
+#Table td, #contactTable td {
+  background-color: #ffffff; /* white rows */
   color: #333;
   padding: 12px;
   border-bottom: 1px solid #ddd;
 }
+
 
 /* Only Gmail/email link hover effect */
 #contactTable td a {
@@ -299,21 +287,30 @@ h2 { font-size: 50px; }
   transform: scale(1.1);
 }
 
-/* FLEX IMAGES */
+/* FLEX IMAGES - PLAYER SHOWCASE */
 .flex-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-wrap: wrap;        /* allow items to go to next row */
+  justify-content: center; /* center all items */
+  gap: 20px;              /* spacing between images */
 }
 
 .flex-item-left {
-  flex: calc(100% / 6 - 10px);
+  width: 180px;           /* fixed width */
+  height: 240px;          /* fixed height */
+  flex: 0 0 auto;         /* don't grow or shrink */
+  display: flex;           /* center image inside container */
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff33; /* optional subtle background */
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .flex-item-left img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+  width: auto;            /* image keeps natural aspect ratio */
+  height: 90%;            /* fit inside container without stretching */
+  object-fit: contain;    /* don't crop or distort */
   border-radius: 5px;
 }
 
@@ -332,17 +329,74 @@ footer {
   max-width: 1000px;
 }
 
-/* RESPONSIVE DESIGN */
+/* --- Responsive fix: stack containers vertically on smaller screens --- */
+@media (max-width: 1000px) {
+  .container-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 700px;
+  }
+
+  .container-2 {
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 900px) {
-  .poster { flex: 0 1 45%; }
-  .container-2 { width: 100%; max-height: 300px; }
+  .poster {
+    flex: 0 1 45%; /* 2 posters per row on medium screens */
+  }
 }
-
-@media (max-width: 800px) {
-  .flex-item-left { flex: 50%; }
-}
-
 
 @media (max-width: 500px) {
-  .flex-item-left { flex: 100%; }
+  .poster {
+    flex: 0 1 100%; /* 1 poster per row on phones */
+  }
+}
+/* Responsive font size for smaller screens */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 45px; /* smaller on tablets */
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 30px; /* smaller on phones */
+    padding: 0 10px; /* adds space so text doesn’t touch edges */
+  }
+}
+/* Optional: adjust font size for smaller screens */
+@media (max-width: 600px) {
+  nav a {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  #Table, #contactTable {
+    font-size: 16px;
+  }
+
+  #Table th, #contactTable th,
+  #Table td, #contactTable td {
+    padding: 8px;
+  }
+}
+@media (max-width: 900px) {
+  .flex-item-left {
+    width: 140px;
+    height: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .flex-item-left {
+    width: 100px;
+    height: 150px;
+  }
 }
